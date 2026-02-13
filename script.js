@@ -105,10 +105,16 @@ yesBtn.addEventListener("click", () => {
 
             <div class="letter" id="letter">
               <h2>My Letter For You 💌</h2>
-              <p id="letterText" data-fulltext="From the moment you clicked yes,
-              \nyou officially made my day brighter.
+              <p id="letterText" data-fulltext=
+              "Happy Valentine's Day,my love.
               \nThank you for being you.
-              \nHappy Valentine’s Day 💕"></p>
+              \nI don’t say it enough, but 
+              \nI’m really lucky to have you. 
+              \nYou make my days better 
+              \njust by being in them. 
+              \nI am sorry for being too
+              \nmuch to handle sometimes.
+              \nI will love You and only You. "></p>
             </div>
           </div>
         `;
@@ -233,4 +239,5 @@ function closeLetter() {
 function toggleEnvelope() {
   if (envelopeOpen) closeLetter();
   else openLetter();
+
 }
