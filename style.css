@@ -1,10 +1,8 @@
-/* Reset default styles */
 html, body {
   margin: 0;
   padding: 0;
 }
 
-/* Main body styles */
 body {
   min-height: 100vh;
   display: flex;
@@ -17,7 +15,6 @@ body {
   overflow: hidden;
 }
 
-/* Container for content */
 .container {
   width: 100%;
   max-width: 460px;
@@ -35,7 +32,6 @@ h1 {
   line-height: 1.2;
 }
 
-/* Buttons container */
 .icon {
   font-size: 2.6rem;
   margin-bottom: 6px;
@@ -43,13 +39,13 @@ h1 {
 
 .buttons {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 12px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
-/* Button base styles */
 button {
   border: none;
   border-radius: 25px;
@@ -57,8 +53,8 @@ button {
   transition: transform 0.2s, font-size 0.2s, box-shadow 0.2s, padding 0.3s;
   font-size: 1rem;
   padding: 12px 24px;
-  font-family: "Montez", cursive;
-  background-color: rgb(12, 58, 99);
+  font-family: "martel", serif;
+  background-color: rgb(243, 130, 215);
   color: white;
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -70,19 +66,16 @@ button:active {
   transform: scale(0.95);
 }
 
-/* Yes button hover effect */
 #yes:hover {
   transform: scale(1.1) rotate(-5deg);
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* No button hover effect */
 #no:hover {
   transform: scale(1.1) rotate(5deg);
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* GIF container */
 #gif-box {
   margin-top: 8px;
   height: 120px;
@@ -91,7 +84,6 @@ button:active {
   align-items: center;
 }
 
-/* Reaction GIF */
 #reactionGif {
   max-width: 140px;
   max-height: 140px;
@@ -99,7 +91,6 @@ button:active {
   transform: scale(0.5);
 }
 
-/* Shake animation */
 .shake {
   animation: shake 0.4s;
 }
@@ -112,14 +103,12 @@ button:active {
   100% { transform: translateX(0); }
 }
 
-/* Pop animation */
 @keyframes pop {
   0% { transform: scale(1); }
   50% { transform: scale(1.3); }
   100% { transform: scale(1); }
 }
 
-/* GIF pop animation */
 .show-gif {
   animation: gifPop 0.5s ease forwards;
 }
@@ -138,7 +127,6 @@ button:active {
   }
 }
 
-/* Heart floating animation */
 .heart {
   position: fixed;
   bottom: -20px;
@@ -158,7 +146,6 @@ button:active {
   }
 }
 
-/* Desktop responsive styles */
 @media (min-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -167,15 +154,7 @@ button:active {
   .container {
     padding: 40px;
   }
-  
-  #yes:hover {
-    transform: scale(1.2) rotate(-10deg);
-  }
-  
-  #no:hover {
-    transform: scale(1.2) rotate(10deg);
-  }
-  
+
   button {
     font-size: 1.1rem;
     padding: 15px 30px;
@@ -190,7 +169,6 @@ button:active {
   }
 }
 
-/* Success message animation */
 .success-message {
   font-size: 3rem;
   color: white;
@@ -199,7 +177,6 @@ button:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   margin: 0;
 }
 
@@ -242,7 +219,6 @@ button:active {
   }
 }
 
-/* Success heart animation */
 .success-heart {
   position: fixed;
   font-size: 40px;
@@ -258,4 +234,104 @@ button:active {
     opacity: 0;
     transform: translateY(-100vh) scale(1.5);
   }
+}
+
+.success-section {
+  min-height: 50vh;
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.success-sub {
+  margin-top: 12px;
+  color: #4a2230;
+  font-size: 1.05rem;
+  opacity: 0.98;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+.letter-section {
+  min-height: 50vh;
+  max-width: 720px;
+  margin: 28px auto;
+  padding: 20px;
+  background: #fff0f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 14px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+}
+
+.envelope {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff, #ffeef8);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+  font-size: 48px;
+  color: #6e2640;
+}
+
+.envelope:hover {
+  transform: translateY(-6px) scale(1.06);
+}
+
+.letter {
+  margin-top: 6px;
+  background: #ffffff;
+  padding: 16px;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  opacity: 0;
+  transform: translateY(14px) scale(0.995);
+  transition: all 0.35s ease;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #4a2230;
+  font-size: 0.98rem;
+  line-height: 0.9;
+}
+
+.letter.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.letter p {
+  margin: 0 0 10px 0;
+}
+
+#letterText {
+  white-space: pre-wrap;
+  word-break: break-word;
 }
